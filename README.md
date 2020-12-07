@@ -16,12 +16,10 @@ Website Demo: [http://laravel-task1.herokuapp.com](http://laravel-task1.herokuap
 ## Installation
 
 1. Clone the repo and `cd` into it
-1. `composer install`
 1. Rename or copy `.env.example` file to `.env`
 1. `php artisan key:generate`
 1. Set your database credentials in your `.env` file
 1. Set your `APP_URL` in your `.env` file.
-1. Set `ADMIN_PASSWORD` in your `.env` file if you want to specify an admin password. If not, the default password is 'password'
 1. `composer install`. This will install the vendor and run any library necessary.
 1. `npm install`
 1. `npm run dev`
