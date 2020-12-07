@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\News;
+
 class HomeController extends Controller
 {
     /**
@@ -21,8 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-
-        return view('admin.home');
+        $news = News::count();
+        $category = Category::count();
+        return view('admin.home', compact('news', 'category'));
     }
     public function admin()
     {

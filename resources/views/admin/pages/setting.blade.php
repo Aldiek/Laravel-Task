@@ -50,3 +50,5 @@
         <br>
     </form>
 @endsection
+@section('title', 'Setting')
+@section('title2', 'Home/Setting')

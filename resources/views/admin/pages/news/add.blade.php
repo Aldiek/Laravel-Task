@@ -1,6 +1,6 @@
 @extends('admin.index')
 @section('content')
-    <form method="POST" action="">
+    <form method="POST" action="{{ route('news.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="form-row">
 
@@ -9,9 +9,7 @@
                 <input name="name" type="text" class="form-control" id="inputZip">
             </div>
             <div class="form-group col-md-4">
-                <br>
-                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                <label class="custom-file-label" for="validatedCustomFile">Upload Main Photo</label>
+                <input type="file" name="photo" required>
             </div>
 
             <div class="form-group col-md-4">
@@ -31,16 +29,21 @@
 
         <div class="form-group">
             <label for="exampleFormControlTextarea1">News Content</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
 
 
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Drop Zone Upload Image</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
+        {{-- <div class="form-group">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                <div class="invalid-feedback">Drop Zone Upload Image</div>
+            </div>
+        </div> --}}
 
-        <button type="button" class="btn btn-success">Add</button>
+        <button type="submit" class="btn btn-success">Add</button>
 
     </form>
 @endsection
+@section('title', 'Add News')
+@section('title2', 'News/Add News')

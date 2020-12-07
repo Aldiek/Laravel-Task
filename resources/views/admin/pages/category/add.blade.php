@@ -17,3 +17,5 @@
         <button type="submit" class="btn btn-primary">Add</button>
     </form>
 @endsection
+@section('title', 'Add Category')
+@section('title2', 'Category/Add Category')

@@ -12,7 +12,7 @@
                 <!-- small box -->
                 <div class="small-box bg-success">
                     <div class="inner">
-                        <h3>53</h3>
+                        <h3>{{ $category }}</h3>
 
                         <p>Categories Count</p>
                     </div>
@@ -28,7 +28,7 @@
                 <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner">
-                        <h3>44</h3>
+                        <h3>{{ $news }}</h3>
 
                         <p>News Count</p>
                     </div>
@@ -50,3 +50,5 @@
 
     </div>
 @endsection
+@section('title', 'Dashboard')
+@section('title2', 'Dashboard')

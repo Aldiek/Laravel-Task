@@ -41,7 +41,17 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $fileName = time() . '_' . $request->photo->getClientOriginalName();
+        $filePath = $request->file('photo')->storeAs('img', $fileName, 'news');
+        News::create([
+            'photo' => $filePath,
+            'name' => $request->name,
+            'category' => $request->category,
+            'content' => $request->content,
+        ]);
+        return redirect('admin/news');
+
     }
 
     /**
@@ -52,7 +62,8 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        return view('admin.pages.news.show');
+        $news = News::find($id);
+        return view('admin.pages.news.show', compact('news'));
 
     }
 
@@ -64,7 +75,10 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.pages.news.edit');
+        $news = News::find($id);
+        $categories = Category::get();
+
+        return view('admin.pages.news.edit', compact('categories', 'news'));
     }
 
     /**
@@ -76,7 +90,19 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $fileName = time() . '_' . $request->photo->getClientOriginalName();
+        $filePath = $request->file('photo')->storeAs('uploads', $fileName, 'public');
+
+        $fileName = time() . '_' . $request->photo->getClientOriginalName();
+        $filePath = $request->file('photo')->storeAs('uploads', $fileName, 'public');
+        News::where('id', $id)->update([
+            'photo' => '/storage/' . $filePath,
+            'name' => $request->name,
+            'category' => $request->category,
+            'content' => $request->content,
+        ]);
+        return redirect('admin/news');
+
     }
 
     /**

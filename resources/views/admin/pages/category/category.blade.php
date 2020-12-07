@@ -32,3 +32,5 @@
         </tbody>
     </table>
 @endsection
+@section('title', 'Category')
+@section('title2', 'Category')
