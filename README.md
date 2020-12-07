@@ -11,7 +11,7 @@
 
 # Laravel Task.pdf
 
-Website Demo: [http://laravel-task1.herokuapp.com/admin/login](http://laravel-task1.herokuapp.com/admin/login). The demo has limited permissions. Install locally for full access.
+Website Demo: [http://laravel-task1.herokuapp.com](http://laravel-task1.herokuapp.com). The demo has limited permissions. Install locally for full access.
 
 ## Installation
 
