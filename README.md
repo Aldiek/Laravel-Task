@@ -27,4 +27,4 @@ Website Demo: [http://laravel-task1.herokuapp.com](http://laravel-task1.herokuap
 1. `npm run dev`
 1. `php artisan serve` or use Laravel Valet or Laravel Homestead
 1. Visit `localhost:8000` in your browser
-1. Visit `/admin` if you want to access the AdminLTE admin backend. Admin User/Password: `admin@admin.com/password`. Admin Web User/Password: `adminweb@adminweb.com/password`
+1. Visit `/admin` if you want to access the AdminLTE admin backend. Admin User/Password: `admin@admin.com/password`.
