@@ -2,6 +2,7 @@
 @section('content')
     <form method="POST" action="{{ route('news.update', $news->id) }}" enctype="multipart/form-data">
         @csrf
+        @method('PUT')
         <div class="form-row">
 
             <div class="form-group col-md-4">
